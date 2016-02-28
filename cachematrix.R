@@ -5,18 +5,18 @@
 ##except that the dimension here is matrix()
 
 makeCacheMatrix <- function(x = matrix()) {
-        inv <- NULL
+        inv_mtrx <- NULL
         set <- function(y) {
                 x <<- y
-                inv <<- NULL
+                inv_mtrx <<- NULL
         }
         get <- function() x
-        setInverse <- function(inverse) inv <<- inverse
-        getInverse <- function() inv
+        set_inv_mtrx <- function(inverse) inv_mtrx <<- inverse
+        get_inv_mtrx <- function() inv_mtrx
         list(set = set,
              get = get,
-             setInverse = setInverse,
-             getInverse = getInverse)
+             set_inv_mtrx = set_inv_mtrx,
+             get_inv_mtrx = get_inv_mtrx)
 }
 
 
